@@ -1,0 +1,150 @@
+^H:\PAYPAL_CALCULATOR\BUILD\_DEPS\ASIO-SUBBUILD\CMAKEFILES\A3E3636DE0C6AEF0C4A79468C9D34822\ASIO-POPULATE-MKDIR.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P H:/Paypal_Calculator/build/_deps/asio-subbuild/asio-populate-prefix/tmp/asio-populate-mkdirs.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch H:/Paypal_Calculator/build/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/Debug/asio-populate-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^H:\PAYPAL_CALCULATOR\BUILD\_DEPS\ASIO-SUBBUILD\CMAKEFILES\A3E3636DE0C6AEF0C4A79468C9D34822\ASIO-POPULATE-DOWNLOAD.RULE
+setlocal
+cd H:\Paypal_Calculator\build\_deps
+if %errorlevel% neq 0 goto :cmEnd
+H:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P H:/Paypal_Calculator/build/_deps/asio-subbuild/asio-populate-prefix/tmp/asio-populate-gitclone.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch H:/Paypal_Calculator/build/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/Debug/asio-populate-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^H:\PAYPAL_CALCULATOR\BUILD\_DEPS\ASIO-SUBBUILD\CMAKEFILES\A3E3636DE0C6AEF0C4A79468C9D34822\ASIO-POPULATE-UPDATE.RULE
+setlocal
+cd H:\Paypal_Calculator\build\_deps\asio-src
+if %errorlevel% neq 0 goto :cmEnd
+H:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P H:/Paypal_Calculator/build/_deps/asio-subbuild/asio-populate-prefix/tmp/asio-populate-gitupdate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^H:\PAYPAL_CALCULATOR\BUILD\_DEPS\ASIO-SUBBUILD\CMAKEFILES\A3E3636DE0C6AEF0C4A79468C9D34822\ASIO-POPULATE-PATCH.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch H:/Paypal_Calculator/build/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/Debug/asio-populate-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^H:\PAYPAL_CALCULATOR\BUILD\_DEPS\ASIO-SUBBUILD\CMAKEFILES\A3E3636DE0C6AEF0C4A79468C9D34822\ASIO-POPULATE-CONFIGURE.RULE
+setlocal
+cd H:\Paypal_Calculator\build\_deps\asio-build
+if %errorlevel% neq 0 goto :cmEnd
+H:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch H:/Paypal_Calculator/build/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/Debug/asio-populate-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^H:\PAYPAL_CALCULATOR\BUILD\_DEPS\ASIO-SUBBUILD\CMAKEFILES\A3E3636DE0C6AEF0C4A79468C9D34822\ASIO-POPULATE-BUILD.RULE
+setlocal
+cd H:\Paypal_Calculator\build\_deps\asio-build
+if %errorlevel% neq 0 goto :cmEnd
+H:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch H:/Paypal_Calculator/build/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/Debug/asio-populate-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^H:\PAYPAL_CALCULATOR\BUILD\_DEPS\ASIO-SUBBUILD\CMAKEFILES\A3E3636DE0C6AEF0C4A79468C9D34822\ASIO-POPULATE-INSTALL.RULE
+setlocal
+cd H:\Paypal_Calculator\build\_deps\asio-build
+if %errorlevel% neq 0 goto :cmEnd
+H:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch H:/Paypal_Calculator/build/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/Debug/asio-populate-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^H:\PAYPAL_CALCULATOR\BUILD\_DEPS\ASIO-SUBBUILD\CMAKEFILES\A3E3636DE0C6AEF0C4A79468C9D34822\ASIO-POPULATE-TEST.RULE
+setlocal
+cd H:\Paypal_Calculator\build\_deps\asio-build
+if %errorlevel% neq 0 goto :cmEnd
+H:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch H:/Paypal_Calculator/build/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/Debug/asio-populate-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^H:\PAYPAL_CALCULATOR\BUILD\_DEPS\ASIO-SUBBUILD\CMAKEFILES\D8CC2A79B3467600209EC6DC0E99939C\ASIO-POPULATE-COMPLETE.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory H:/Paypal_Calculator/build/_deps/asio-subbuild/CMakeFiles/Debug
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch H:/Paypal_Calculator/build/_deps/asio-subbuild/CMakeFiles/Debug/asio-populate-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch H:/Paypal_Calculator/build/_deps/asio-subbuild/asio-populate-prefix/src/asio-populate-stamp/Debug/asio-populate-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^H:\PAYPAL_CALCULATOR\BUILD\_DEPS\ASIO-SUBBUILD\CMAKEFILES\CCB3A9354576B4BAC81D53DF0B7A8661\ASIO-POPULATE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^H:\PAYPAL_CALCULATOR\BUILD\_DEPS\ASIO-SUBBUILD\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SH:/Paypal_Calculator/build/_deps/asio-subbuild -BH:/Paypal_Calculator/build/_deps/asio-subbuild --check-stamp-file H:/Paypal_Calculator/build/_deps/asio-subbuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

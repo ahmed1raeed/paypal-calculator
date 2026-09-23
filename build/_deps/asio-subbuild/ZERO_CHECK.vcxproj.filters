@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="H:\Paypal_Calculator\build\_deps\asio-subbuild\CMakeFiles\ccb3a9354576b4bac81d53df0b7a8661\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{DD74E09E-1F76-3FAB-BB06-D1B32D6FAB79}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

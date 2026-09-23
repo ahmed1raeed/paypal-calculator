@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Calculate standard PayPal merchant and personal transaction fees instantly with real-time fee breakdown.">
+  <title>PayPal Fee Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="https://a.favicon.im/paypal.com">
+</head>
+
+<body>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="app-header">
+    <div class="header-container">
+      <a href="/" class="brand-wrapper" aria-label="PayPal Calculator Home">
+        <div class="paypal-logo-clean" style="display: flex; align-items: center; gap: 8px;">
+          <img src="https://a.favicon.im/paypal.com" alt="PayPal" style="height: 28px; width: auto; display: block;">
+          <span
+            style="font-size: 22px; font-weight: 800; color: #003087; font-family: var(--font-family-base); letter-spacing: -0.5px;">
+            Pay<span style="color: #0070BA;">Pal</span>
+          </span>
+        </div>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Application Body -->
+  <main class="main-content">
+
+    <!-- Hero / Intro -->
+    <section class="hero-section">
+      <span class="hero-pill">Official Standard Rates</span>
+      <h1 class="hero-title">PayPal Fee Calculator</h1>
+      <p class="hero-subtitle">
+        Accurately estimate transaction fees and calculate exact net earnings using the standard PayPal merchant and
+        goods formula.
+      </p>
+    </section>
+
+    <!-- Interactive Grid Layout -->
+    <div class="calculator-grid">
+
+      <!-- LEFT: Inputs & Presets Card -->
+      <section class="paypal-card input-card" aria-labelledby="input-card-title">
+        <header class="card-header">
+          <h2 id="input-card-title" class="card-title">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-primary);">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <line x1="1" y1="10" x2="23" y2="10" />
+            </svg>
+            Transaction Details
+          </h2>
+          <p class="card-description">Enter the gross transaction amount to compute fees in real-time.</p>
+        </header>
+
+        <form id="calculator-form" onsubmit="event.preventDefault();">
+          <div class="form-group">
+            <label for="amount-input" class="form-label">
+              <span>Transaction Amount</span>
+              <span class="rate-badge">Rate: 3.4% + $0.30</span>
+            </label>
+            <div class="input-currency-wrapper">
+              <span class="currency-prefix">$</span>
+              <input type="number" id="amount-input" class="amount-input" value="100.00" placeholder="0.00"
+                step="any" />
+            </div>
+          </div>
+
+          <!-- Quick Presets -->
+          <div class="presets-section">
+            <div class="presets-label">Quick Amounts</div>
+            <div class="presets-grid" id="presets-container">
+              <button type="button" class="preset-chip" data-amount="10">$10</button>
+              <button type="button" class="preset-chip" data-amount="50">$50</button>
+              <button type="button" class="preset-chip active" data-amount="100">$100</button>
+              <button type="button" class="preset-chip" data-amount="250">$250</button>
+              <button type="button" class="preset-chip" data-amount="500">$500</button>
+              <button type="button" class="preset-chip" data-amount="1000">$1,000</button>
+              <button type="button" class="preset-chip" data-amount="2500">$2,500</button>
+              <button type="button" class="preset-chip" data-amount="5000">$5,000</button>
+            </div>
+          </div>
+
+          <!-- Calculate Action Button -->
+          <button type="submit" id="calculate-btn" class="btn-primary">
+            <span class="btn-spinner" id="btn-spinner"></span>
+            <span id="btn-text">Calculate Fee</span>
+          </button>
+        </form>
+      </section>
+
+      <!-- RIGHT: Detailed Results Breakdown Card -->
+      <section class="paypal-card results-card" aria-labelledby="results-card-title">
+        <header class="card-header">
+          <h2 id="results-card-title" class="card-title">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-primary);">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <polyline points="10 9 9 9 8 9" />
+            </svg>
+            Fee Details
+          </h2>
+        </header>
+
+        <!-- Big Highlight Display -->
+        <div class="results-hero-box">
+          <div class="results-hero-label">Estimated PayPal Fee</div>
+          <div class="results-hero-value">
+            <span id="display-fee">$3.70</span>
+          </div>
+        </div>
+
+        <!-- Metric Table / Breakdown List -->
+        <div class="breakdown-list">
+          <!-- 1st: Base Amount -->
+          <div class="breakdown-item">
+            <span class="breakdown-label">Base Amount</span>
+            <span class="breakdown-value" id="display-amount">$100.00</span>
+          </div>
+
+          <!-- 2nd: PayPal Fee -->
+          <div class="breakdown-item">
+            <span class="breakdown-label">PayPal Fee</span>
+            <span class="breakdown-value fee-highlight" id="display-breakdown-fee">$3.70</span>
+          </div>
+
+          <!-- 3rd: Net Received (Highlighted visually in green) -->
+          <div class="breakdown-item highlight-net">
+            <span class="breakdown-label">Net Amount Received</span>
+            <span class="breakdown-value net-highlight" id="display-net">$96.30</span>
+          </div>
+
+          <!-- 4th: Total To Send -->
+          <div class="breakdown-item">
+            <span class="breakdown-label">Total You Pay</span>
+            <span class="breakdown-value total-highlight" id="display-total">$103.70</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

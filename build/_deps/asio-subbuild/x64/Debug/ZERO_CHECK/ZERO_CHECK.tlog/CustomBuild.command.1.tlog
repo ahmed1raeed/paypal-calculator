@@ -1,0 +1,10 @@
+^H:\PAYPAL_CALCULATOR\BUILD\_DEPS\ASIO-SUBBUILD\CMAKEFILES\CCB3A9354576B4BAC81D53DF0B7A8661\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SH:/Paypal_Calculator/build/_deps/asio-subbuild -BH:/Paypal_Calculator/build/_deps/asio-subbuild --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file H:/Paypal_Calculator/build/_deps/asio-subbuild/asio-populate.slnx
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
