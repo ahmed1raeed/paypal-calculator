@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"H:/Paypal_Calculator/build/cmake_install.cmake",
-		"H:/Paypal_Calculator/build/_deps/crow-build/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
