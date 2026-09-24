@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Calculate standard PayPal merchant and personal transaction fees instantly with real-time fee breakdown.">
-  <title>PayPal Fee Calculator</title>
+  <title>PayPal Calculator</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="https://a.favicon.im/paypal.com">
 </head>
@@ -110,38 +110,26 @@
           </h2>
         </header>
 
-        <!-- Big Highlight Display -->
         <div class="results-hero-box">
-          <div class="results-hero-label">Estimated PayPal Fee</div>
+          <div class="results-hero-label">Net Amount Received</div>
           <div class="results-hero-value">
-            <span id="display-fee">$3.70</span>
+            <span id="display-net" style="color: var(--color-success, #107C41);">$96.30</span>
           </div>
         </div>
 
-        <!-- Metric Table / Breakdown List -->
+
         <div class="breakdown-list">
-          <!-- 1st: Base Amount -->
           <div class="breakdown-item">
-            <span class="breakdown-label">Base Amount</span>
+            <span class="breakdown-label">Transaction Amount</span>
             <span class="breakdown-value" id="display-amount">$100.00</span>
           </div>
-
-          <!-- 2nd: PayPal Fee -->
           <div class="breakdown-item">
             <span class="breakdown-label">PayPal Fee</span>
-            <span class="breakdown-value fee-highlight" id="display-breakdown-fee">$3.70</span>
+            <span class="breakdown-value fee-highlight" id="display-fee" style="color: #d9381e;">-$3.70</span>
           </div>
-
-          <!-- 3rd: Net Received (Highlighted visually in green) -->
-          <div class="breakdown-item highlight-net">
-            <span class="breakdown-label">Net Amount Received</span>
-            <span class="breakdown-value net-highlight" id="display-net">$96.30</span>
-          </div>
-
-          <!-- 4th: Total To Send -->
           <div class="breakdown-item">
             <span class="breakdown-label">Total You Pay</span>
-            <span class="breakdown-value total-highlight" id="display-total">$103.70</span>
+            <span class="breakdown-value" id="display-total">$100.00</span>
           </div>
         </div>
       </section>

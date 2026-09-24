@@ -535,6 +535,11 @@ body {
   margin-top: 0.5rem;
 }
 
+.results-hero-label {
+  color: #111827 !important;
+  font-weight: 700;
+}
+
 /* Breakdown List */
 .breakdown-list {
   display: flex;
