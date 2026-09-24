@@ -7,6 +7,10 @@
   <meta name="description"
     content="Calculate standard PayPal merchant and personal transaction fees instantly with real-time fee breakdown.">
   <title>PayPal Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="https://a.favicon.im/paypal.com">
 </head>
@@ -36,9 +40,32 @@
       <span class="hero-pill">Official Standard Rates</span>
       <h1 class="hero-title">PayPal Fee Calculator</h1>
       <p class="hero-subtitle">
-        Accurately estimate transaction fees and calculate exact net earnings using the standard PayPal merchant and
-        goods formula.
+        Accurately estimate transaction fees and calculate exact net earnings using standard PayPal business and
+        personal transfer formulas.
       </p>
+
+      <!-- Calculator Mode Tabs -->
+      <div class="calculator-tabs">
+        <button type="button" class="tab-btn active" data-mode="commercial">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1" />
+            <circle cx="20" cy="21" r="1" />
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+          </svg>
+          Goods & Services
+        </button>
+        <button type="button" class="tab-btn" data-mode="personal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+          Friends & Family
+        </button>
+      </div>
     </section>
 
     <!-- Interactive Grid Layout -->
@@ -55,14 +82,14 @@
             </svg>
             Transaction Details
           </h2>
-          <p class="card-description">Enter the gross transaction amount to compute fees in real-time.</p>
+          <p class="card-description" id="mode-description">Enter the gross amount to compute fees in real-time.</p>
         </header>
 
         <form id="calculator-form" onsubmit="event.preventDefault();">
           <div class="form-group">
             <label for="amount-input" class="form-label">
-              <span>Transaction Amount</span>
-              <span class="rate-badge">Rate: 3.4% + $0.30</span>
+              <span id="amount-label-text">Transaction Amount</span>
+              <span class="rate-badge" id="rate-badge">Rate: 3.4% + $0.30</span>
             </label>
             <div class="input-currency-wrapper">
               <span class="currency-prefix">$</span>
@@ -111,16 +138,15 @@
         </header>
 
         <div class="results-hero-box">
-          <div class="results-hero-label">Net Amount Received</div>
+          <div class="results-hero-label" id="hero-label">Net Amount Received</div>
           <div class="results-hero-value">
             <span id="display-net" style="color: var(--color-success, #107C41);">$96.30</span>
           </div>
         </div>
 
-
         <div class="breakdown-list">
           <div class="breakdown-item">
-            <span class="breakdown-label">Transaction Amount</span>
+            <span class="breakdown-label" id="label-amount">Transaction Amount</span>
             <span class="breakdown-value" id="display-amount">$100.00</span>
           </div>
           <div class="breakdown-item">
@@ -128,8 +154,8 @@
             <span class="breakdown-value fee-highlight" id="display-fee" style="color: #d9381e;">-$3.70</span>
           </div>
           <div class="breakdown-item">
-            <span class="breakdown-label">Total You Pay</span>
-            <span class="breakdown-value" id="display-total">$100.00</span>
+            <span class="breakdown-label" id="label-total">Total You Ask For</span>
+            <span class="breakdown-value total-highlight" id="display-total">$103.83</span>
           </div>
         </div>
       </section>
